@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>mapping</P>
+    <P id="P"></P>
+    <button onclick="A()">ascending</button>
+    <button onclick="D()">descending</button>
+    <script>
+        var number = [3 , 20 , 4 , 6 , 82 , 7];
+
+        function my(num) {
+            return num * 2;
+        }
+
+        var newarray = number.map(my);
+        document.getElementById("P").innerHTML = "map vaue is "+newarray;
+
+        function A(){
+            newarray.sort(function(a,b){return a-b});
+            document.getElementById("P").innerHTML = "the ascendint map"+newarray
+        }
+        function D() {
+            newarray.sort(function(a,b){return b-a})
+            document.getElementById("P").innerHTML = "the descendint map"+newarray
+        }
+    </script>
+</body>
+</html>
